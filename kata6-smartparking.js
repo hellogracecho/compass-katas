@@ -54,7 +54,7 @@ console.log(
     ],
     'regular'
   )
-);
+); // [4, 0]
 
 console.log(
   whereCanIPark(
@@ -66,7 +66,7 @@ console.log(
     ],
     'small'
   )
-);
+); // false
 
 console.log(
   whereCanIPark(
@@ -80,4 +80,4 @@ console.log(
     ],
     'motorcycle'
   )
-);
+); // [3, 1]
