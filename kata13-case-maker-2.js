@@ -8,16 +8,16 @@
 
 // Put your solution here
 
-const vowels = ['a', 'e', 'i', 'o', 'u'];
-
 // myCase can takes only one case
 const runCase = (input, myCase) => {
+  const vowels = ['a', 'e', 'i', 'o', 'u'];
+
   let result = '';
 
   switch (myCase) {
     case 'camel':
       result = input
-        .replace(/(?:^\w|[A-Z]|\b\w)/g, function (word, index) {
+        .replace(/(?:^\w|[A-Z]|\b\w)/g, (word, index) => {
           return index === 0 ? word.toLowerCase() : word.toUpperCase();
         })
         .replace(/\s+/g, '');
@@ -25,7 +25,7 @@ const runCase = (input, myCase) => {
 
     case 'pascal':
       result = input
-        .replace(/(?:^\w|[A-Z]|\b\w)/g, function (word) {
+        .replace(/(?:^\w|[A-Z]|\b\w)/g, (word) => {
           return word.toUpperCase();
         })
         .replace(/\s+/g, '');
@@ -41,7 +41,7 @@ const runCase = (input, myCase) => {
 
     case 'title':
       result = input
-        .replace(/(?:^\w|[A-Z]|\b\w)/g, function (word) {
+        .replace(/(?:^\w|[A-Z]|\b\w)/g, (word) => {
           return word.toUpperCase();
         })
         .replace(/\s+/g, ' ');
