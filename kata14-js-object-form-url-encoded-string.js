@@ -17,22 +17,9 @@
 
 const urlDecode = function (text) {
   // Put your solution here
-  let arr = new Array();
-  if (text.includes('&')) {
-    arr = text.split('&');
-  } else {
-    arr = [text];
-  }
-
   let obj = new Object();
-  for (let code of arr) {
-    // console.log(code);
-    let key = code.split('=')[0];
-    let value = code.split('=')[1].replace('%20', ' ');
 
-    obj[key] = value;
-  }
-  return obj;
+  console.log(text.split('='));
 };
 
 console.log(urlDecode('duck=rubber')); // {duck: "rubber"}
